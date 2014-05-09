@@ -168,7 +168,7 @@ template "#{node['apache']['dir']}/ports.conf" do
   notifies :reload, 'service[apache2]'
 end
 
-template "#{node['apache']['dir']}/sites-available/default" do
+template "#{node['apache']['dir']}/sites-available/default.conf" do
   source   'default-site.erb'
   owner    'root'
   group    node['apache']['root_group']
